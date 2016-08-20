@@ -7,9 +7,16 @@ class ErrandList extends React.Component {
 
   render() {
     return (
-      <div>
-        ErrandList
-      </div>
+      <section id="errand-list">
+        <ul>
+          {this.props.errandList.map(errand => (
+            <li key={errand._id}>
+              {errand.title}
+            </li>
+          ))}
+
+        </ul>
+      </section>
     );
   }
 }
