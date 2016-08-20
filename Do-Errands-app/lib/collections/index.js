@@ -1,3 +1,6 @@
+import Errands from './errands';
+
 export {
-  undefined
+  undefined,
+  Errands
 };
