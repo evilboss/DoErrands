@@ -12,9 +12,10 @@ class CreateErrand extends React.Component {
     let serviceFee = this.refs.serviceFee.value;
     let createdAt = new Date();
     console.log(title);
-    this.props.errands.insert({title: title, serviceFee: serviceFee, createdAt: createdAt})
-    this.title = '';
-    this.serviceFee = '';
+    this.props.errands.insert({title: title, serviceFee: serviceFee, createdAt: createdAt});
+    this.refs.errandTitle.value = '';
+    this.refs.serviceFee.value = '';
+    sweetAlert("Posted!", "You clicked the button!", "success");
   }
 
 
