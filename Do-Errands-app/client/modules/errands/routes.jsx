@@ -21,7 +21,6 @@ export default function (injectDeps, {FlowRouter}) {
     name: 'errand.list',
     action() {
       mount(MainLayoutCtx, {
-        header: () => (<Header />),
         content: () => (<ErrandList />)
       });
     }

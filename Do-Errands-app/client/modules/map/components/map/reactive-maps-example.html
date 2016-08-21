@@ -1,22 +1,32 @@
 <template name="map">
-	map changed
   <div class="map-container">
     {{> googleMap name="map" options=mapOptions}}
   </div>
 </template>
 <template name="layout1">
-	{{> Template.dynamic template=top}}
-	{{> Template.dynamic template=main}}
+  {{> Template.dynamic template=top}}
+  {{> Template.dynamic template=main}}
 </template>
 
 <template name="header">
-	<h1>This is the header</h1>
+  <header class="text-center">
+    <div>
+      <span class="pull-left menu glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+      <span class="header-text">
+        Errands
+          </span>
+    </div>
+    <div class="tab">
+      <div><a href="/errand/list">List</a></div>
+      <div class="active">map</div>
+    </div>
+  </header>
 </template>
 
 <template name="postList">
-	<h2>This is the postList area.</h2>
+  <h2>This is the postList area.</h2>
 </template>
 
 <template name="singlePost">
-	<h2>This is the singlePost area.</h2>
+  <h2>This is the singlePost area.</h2>
 </template>

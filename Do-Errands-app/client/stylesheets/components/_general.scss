@@ -47,6 +47,23 @@ header {
   border-radius: 100px;
 }
 
+.tab {
+  margin-top: 0.5em;
+  div {
+    border-radius: 4px;
+    display: inline-block;
+    padding: 0.2em 5em;
+    border: 1px solid white;
+    a {
+      color: white;
+    }
+  }
+  .active {
+    background-color: white;
+    color: $darkest-color;
+  }
+}
+
 section#login {
   .logo {
     margin-top: 3em;
