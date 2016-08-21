@@ -5,35 +5,14 @@ class Header extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    $(document).ready(function () {
-      var trigger = $('.hamburger'),
-        overlay = $('.overlay'),
-        isClosed = false;
+  openNav(e) {
+    e.preventDefault();
+    document.getElementById("mySidenav").style.width = "250px";
+  }
 
-      trigger.click(function () {
-        hamburger_cross();
-      });
-
-      function hamburger_cross() {
-
-        if (isClosed == true) {
-          overlay.hide();
-          trigger.removeClass('is-open');
-          trigger.addClass('is-closed');
-          isClosed = false;
-        } else {
-          overlay.show();
-          trigger.removeClass('is-closed');
-          trigger.addClass('is-open');
-          isClosed = true;
-        }
-      }
-
-      $('[data-toggle="offcanvas"]').click(function () {
-        $('#wrapper').toggleClass('toggled');
-      });
-    });
+  closeNav(e) {
+    e.preventDefault();
+    document.getElementById("mySidenav").style.width = "0";
   }
 
   render() {
@@ -43,10 +22,18 @@ class Header extends React.Component {
     };
     return (
       <header className="text-center">
-        <span className="pull-left menu glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        <span className="pull-left menu glyphicon glyphicon-menu-hamburger" aria-hidden="true"
+              onClick={this.openNav.bind(this)}></span>
         <span className="header-text">
         Errands
           </span>
+
+        <div id="mySidenav" className="sidenav">
+          <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav.bind(this)}>&times;</a>
+          <a href="/errand/create">Create Errand</a>
+          <a href="#">Profile</a>
+          <a href="/">Logout</a>
+        </div>
       </header>
     );
   }
