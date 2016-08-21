@@ -4,7 +4,6 @@ import MapView from '../components/map_view.jsx';
 
 export const composer = ({context}, onData) => {
   const {Meteor, Collections} = context();
-
   onData(null, {});
 };
 
