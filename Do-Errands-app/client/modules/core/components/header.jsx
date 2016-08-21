@@ -31,6 +31,7 @@ class Header extends React.Component {
         <div id="mySidenav" className="sidenav">
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav.bind(this)}>&times;</a>
           <a href="/errand/create">Create Errand</a>
+          <a href="/errand/list">List Errand</a>
           <a href="#">Profile</a>
           <a href="/">Logout</a>
         </div>
