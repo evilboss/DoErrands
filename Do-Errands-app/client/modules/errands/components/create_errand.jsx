@@ -22,9 +22,11 @@ class CreateErrand extends React.Component {
     return (
       <section id="create-errand" onSubmit={this.onSubmitPost.bind(this)}>
         <form>
+          <h4>Tell details</h4>
           <div className="form-group">
-            <input type="text" className="form-control" ref="errandTitle"/>
+            <textarea className="form-control" ref="errandTitle"/>
           </div>
+          <h4>Service Fee</h4>
           <div className="form-group">
             <input type="text" className="form-control" ref="serviceFee"/>
           </div>
