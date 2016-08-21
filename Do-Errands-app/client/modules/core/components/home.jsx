@@ -10,12 +10,12 @@ const Home = () => (
       <div>
         <form>
           <div className="form-group">
-            <input type="text" className="form-control" placeholder="Text input"/>
+            <input type="text" className="form-control" placeholder="Email Address"/>
           </div>
           <div className="form-group">
-            <input type="text" className="form-control" placeholder="Text input"/>
+            <input type="password" className="form-control" placeholder="Password"/>
           </div>
-          <button type="submit" className="btn primary btn-lg btn-block">Login</button>
+          <a href="/errand/list" className="login-btn btn primary btn-lg btn-block">Login</a>
         </form>
       </div>
     </div>

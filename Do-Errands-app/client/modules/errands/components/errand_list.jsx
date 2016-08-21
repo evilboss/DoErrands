@@ -12,7 +12,7 @@ class ErrandList extends React.Component {
         {this.props.errandList.map(errand => (
             <div className="media" key={errand._id}>
               <div className="media-left">
-                <a href="#">
+                <a href="/errand/view">
                   <div className="img-wrapper">
                     <img className="media-object" src="..." alt="..."/>
                   </div>
