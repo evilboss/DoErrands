@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Layout = ({content = () => null }) => (
-  <div>
-    <div>
+
+const Layout = ({header = () => null, content = () => null}) => (
+  <div id="body-wrapper">
+    {header()}
+
       {content()}
-    </div>
   </div>
 );
 

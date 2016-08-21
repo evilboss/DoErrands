@@ -4,8 +4,9 @@ import ErrandList from '../../components/errand_list.jsx';
 
 export const composer = ({context}, onData) => {
   const {Meteor, Collections} = context();
-
-  onData(null, {});
+  const errandList = Collections.Errands.find().fetch();
+  console.log(errandList);
+  onData(null, {errandList});
 };
 
 export const depsMapper = (context, actions) => ({

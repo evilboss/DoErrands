@@ -1,12 +1,11 @@
 import {useDeps, composeAll, composeWithTracker, compose} from 'mantra-core';
 
-import CreateErrand from '../../components/create_errand.jsx';
+import ErrandView from '../../components/errand_view.jsx';
 
 export const composer = ({context}, onData) => {
   const {Meteor, Collections} = context();
-  let errands = Collections.Errands;
-  console.log(errands);
-  onData(null, {errands});
+
+  onData(null, {});
 };
 
 export const depsMapper = (context, actions) => ({
@@ -16,4 +15,4 @@ export const depsMapper = (context, actions) => ({
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(CreateErrand);
+)(ErrandView);
