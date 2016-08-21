@@ -5,7 +5,7 @@ const Home = () => (
     <div className="container">
       <div className="text-center">
         <span className="glyphicon glyphicon-ok logo" aria-hidden="true"></span>
-        <h2 className="text">DoErrands</h2>
+        <h2 className="text">Errands</h2>
       </div>
       <div>
         <form>

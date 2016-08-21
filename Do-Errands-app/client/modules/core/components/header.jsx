@@ -42,8 +42,11 @@ class Header extends React.Component {
       cursor: 'pointer'
     };
     return (
-      <header>
-        DoErrands
+      <header className="text-center">
+        <span className="pull-left menu glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        <span className="header-text">
+        Errands
+          </span>
       </header>
     );
   }

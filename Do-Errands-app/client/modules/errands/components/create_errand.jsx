@@ -9,9 +9,12 @@ class CreateErrand extends React.Component {
   onSubmitPost(e) {
     e.preventDefault();
     let title = this.refs.errandTitle.value;
+    let serviceFee = this.refs.serviceFee.value;
     let createdAt = new Date();
     console.log(title);
-    this.props.errands.insert({title: title, createdAt: createdAt})
+    this.props.errands.insert({title: title, serviceFee: serviceFee, createdAt: createdAt})
+    this.title = '';
+    this.serviceFee = '';
   }
 
 
@@ -19,8 +22,13 @@ class CreateErrand extends React.Component {
     return (
       <section id="create-errand" onSubmit={this.onSubmitPost.bind(this)}>
         <form>
-          <input type="text" ref="errandTitle"/>
-          <button type="submit">Post</button>
+          <div className="form-group">
+            <input type="text" className="form-control" ref="errandTitle"/>
+          </div>
+          <div className="form-group">
+            <input type="text" className="form-control" ref="serviceFee"/>
+          </div>
+          <button type="submit" className="btn primary btn-lg btn-block">Ask someone to do it now</button>
         </form>
       </section>
     );

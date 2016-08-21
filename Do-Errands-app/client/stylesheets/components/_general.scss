@@ -31,7 +31,16 @@ button {
 
 header {
   background-color: $app-color;
-  padding: 1.5em 0.5em;
+  padding: 1em 0.5em;
+  padding-top: 2em;
+  color: white;
+  font-weight: bold;
+  .menu {
+
+  }
+  .header-text {
+
+  }
 }
 
 section#login {
@@ -54,4 +63,33 @@ section#login {
 
     }
   }
+}
+
+section#create-errand {
+  padding: 15px;
+}
+
+section#errand-list {
+  padding: 15px;
+  .img-wrapper {
+    padding: 14px;
+    border-radius: 4px;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+  }
+  .media-object {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+section#errand-view {
+  padding: 15px;
+  .service-charge {
+    padding: 1em 0;
+  }
+}
+
+h4 {
+  color: $darkest-color;
+  font-weight: bold;
 }

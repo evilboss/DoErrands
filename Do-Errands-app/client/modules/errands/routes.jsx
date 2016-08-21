@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'react-mounter';
 import Header from '../core/components/header';
-import {ErrandList, CreateErrand} from './containers/errands/index';
+import {ErrandList, CreateErrand, ErrandView} from './containers/errands/index';
 import MainLayout from '/client/modules/core/components/main_layout.jsx';
 
 export default function (injectDeps, {FlowRouter}) {
@@ -11,6 +11,7 @@ export default function (injectDeps, {FlowRouter}) {
     name: 'errand.create',
     action() {
       mount(MainLayoutCtx, {
+        header: () => (<Header />),
         content: () => (<CreateErrand />)
       });
     }
@@ -22,6 +23,16 @@ export default function (injectDeps, {FlowRouter}) {
       mount(MainLayoutCtx, {
         header: () => (<Header />),
         content: () => (<ErrandList />)
+      });
+    }
+  });
+
+  FlowRouter.route('/errand/view', {
+    name: 'errand.view',
+    action() {
+      mount(MainLayoutCtx, {
+        header: () => (<Header />),
+        content: () => (<ErrandView />)
       });
     }
   });

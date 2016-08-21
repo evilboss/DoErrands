@@ -7,15 +7,26 @@ class ErrandList extends React.Component {
 
   render() {
     return (
-      <section id="errand-list">
-        <ul>
-          {this.props.errandList.map(errand => (
-            <li key={errand._id}>
-              {errand.title}
-            </li>
-          ))}
+      <section id="errand-list" className="container">
 
-        </ul>
+        {this.props.errandList.map(errand => (
+            <div className="media" key={errand._id}>
+              <div className="media-left">
+                <a href="#">
+                  <div className="img-wrapper">
+                    <img className="media-object" src="..." alt="..."/>
+                  </div>
+                </a>
+              </div>
+              <div className="media-body">
+                <h4 className="media-heading">{errand.title}</h4>
+                Php 243.00<br/>
+                Bluroon
+              </div>
+            </div>
+          )
+        )
+        }
       </section>
     );
   }
