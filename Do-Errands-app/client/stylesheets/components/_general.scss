@@ -67,6 +67,10 @@ section#login {
 
 section#create-errand {
   padding: 15px;
+  textarea {
+    height: 208px;
+    resize: none;
+  }
 }
 
 section#errand-list {
