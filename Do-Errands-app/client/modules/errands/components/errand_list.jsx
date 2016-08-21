@@ -5,6 +5,7 @@ class ErrandList extends React.Component {
     super(props);
   }
 
+
   render() {
     return (
       <div>
@@ -17,7 +18,7 @@ class ErrandList extends React.Component {
           </div>
           <div className="tab">
             <div className="active">List</div>
-            <div><a href="/map">map</a></div>
+            <div><a onClick={FlowRouter.redirect('/map')}>map</a></div>
           </div>
         </header>
         <section id="errand-list" className="container">
@@ -32,8 +33,7 @@ class ErrandList extends React.Component {
                 </div>
                 <div className="media-body">
                   <h4 className="media-heading">{errand.title}</h4>
-                  Php 243.00<br/>
-                  Bluroon
+                  Php {errand.serviceFee}<br/>
                 </div>
               </div>
             )
